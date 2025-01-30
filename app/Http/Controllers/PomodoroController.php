@@ -2,64 +2,27 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Pomodoro;
 use Illuminate\Http\Request;
+use Illuminate\Routing\Controller;
 
 class PomodoroController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
-    public function index()
-    {
-        //
+    public function config(Request $request){
+        //PEGANDO AS CONFIGURAÇÔES PASSADAS
+        $icon = $request->rdIcon;
+        $tag = $request->rdTag;
+        $timer = $request->rdTimer;
+        //VOLTANDO A VIEW
+        return view('index',compact('icon','tag','timer'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     */
-    public function show(Pomodoro $pomodoro)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(Pomodoro $pomodoro)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, Pomodoro $pomodoro)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(Pomodoro $pomodoro)
-    {
-        //
+    //Iniciar o pomodoro
+    public function start(Request $request){
+            //PEGANDO AS CONFIGURAÇÔES PASSADAS
+            $icon = $request->icon;
+            $tag = $request->tag;
+            $timer = $request->timer;
+            //VOLTANDO A VIEW
+            return view('pomoStart',compact('icon','tag','timer'));
     }
 }

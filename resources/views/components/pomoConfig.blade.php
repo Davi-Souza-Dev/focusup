@@ -1,6 +1,7 @@
-<form action="" method="POST" class="configForm" id="containerTimer">
+<form action="{{route("pomo.setConfig")}}" method="POST" enctype="multipart/form-data" class="configForm" id="containerTimer">
+  @csrf
     <div class="containerConfig">
-        <a class="configClose" href="index.html">
+        <a class="configClose" href={{route('site.index')}}>
           <svg
             viewBox="0 0 24 24"
             fill="none"
@@ -144,25 +145,25 @@
         </div>
         <div class="containerItem" id="tagContainer">
           <label>
-            <input type="radio" name="rdTag" class="rdTag" />
+            <input type="radio" name="rdTag" class="rdTag" value="Trabalho"/>
             <p class="tag">Trabalho</p>
           </label>
           <label>
-            <input type="radio" name="rdTag" class="rdTag" checked />
+            <input type="radio" name="rdTag" class="rdTag"  value="Estudo" checked />
             <p class="tag">Estudo</p>
           </label>
         </div>
         <div class="containerItem" id="timerContainer">
           <label>
-            <input type="radio" name="rdTimer" class="rdTimer" />
+            <input type="radio" name="rdTimer" class="rdTimer" value="15">
             <p class="timer">15</p>
           </label>
           <label>
-            <input type="radio" name="rdTimer" class="rdTimer" checked />
+            <input type="radio" name="rdTimer" class="rdTimer"  value="25" checked>
             <p class="timer">25</p>
           </label>
           <label>
-            <input type="radio" name="rdTimer" class="rdTimer" />
+            <input type="radio" name="rdTimer" class="rdTimer"  value="50">
             <p class="timer">50</p>
           </label>
         </div>

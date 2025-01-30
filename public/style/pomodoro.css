@@ -39,7 +39,7 @@
     background: var(--branco);
 }
 
-.timerIcon svg{
+.timerIcon img{
     width: 70%;
     height: 70%;
 }
@@ -98,12 +98,10 @@
 }
 
 
-
 /* CONFIG MODAL */
 .configForm{
     width: fit-content;
     height: fit-content;
-    display: none;
 }
 
 .containerConfig{
