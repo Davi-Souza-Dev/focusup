@@ -14,15 +14,14 @@
         @else
             <img src="{{asset('pomoIcons/icon2.svg')}}" alt="icone padrão">
         @endisset
-          
-
+        <input type="hidden" id="timerTag" name="timerTag" value="{{$tag}}">
     </div>
         @if(isset($timer))
             <p class="timerClock" id="timerClock" value={{$timer}}>{{{number_format($timer,2,':','.')}}}</p>
         @else
             <p class="timerClock" id="timerClock" value=25>25:00<p>
         @endif
-    <button class="timerButton">
+    <button class="timerButton" id="btnCancel">
         Cancel
     </button>
 </div>

@@ -15,7 +15,6 @@ class PomodoroController extends Controller
         //VOLTANDO A VIEW
         return view('index',compact('icon','tag','timer'));
     }
-
     //Iniciar o pomodoro
     public function start(Request $request){
             //PEGANDO AS CONFIGURAÇÔES PASSADAS
@@ -24,5 +23,9 @@ class PomodoroController extends Controller
             $timer = $request->timer;
             //VOLTANDO A VIEW
             return view('pomoStart',compact('icon','tag','timer'));
+    }
+    //SALVAR UM POMODORO COMPLETO OU NÃO
+    public function save(Request $request){
+        return redirect()->route('site.index');
     }
 }

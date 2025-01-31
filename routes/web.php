@@ -11,9 +11,10 @@ Route::get('/', [SiteController::class, 'index'])->name('site.index');
 Route::get('/config',function(){
     return view('config');
 })->name('pomo.config');
-
 // SALVAR CONFIGURAÇÔES DO POMODORO
 Route::post('/config',[PomodoroController::class,'config'])->name('pomo.setConfig');
-
 // INICIAR O POMODORO
-Route::post('start',[PomodoroController::class,'start'])->name('pomo.start');
+Route::post('/start',[PomodoroController::class,'start'])->name('pomo.start');
+// SALVAR O POMODORO INICIADO
+Route::post('/save',[PomodoroController::class,'save'])->name('pomo.save');
+
