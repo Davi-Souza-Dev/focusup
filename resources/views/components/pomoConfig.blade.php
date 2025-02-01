@@ -144,14 +144,14 @@
           </label>
         </div>
         <div class="containerItem" id="tagContainer">
-          <label>
-            <input type="radio" name="rdTag" class="rdTag" value="Trabalho"/>
-            <p class="tag">Trabalho</p>
-          </label>
-          <label>
-            <input type="radio" name="rdTag" class="rdTag"  value="Estudo" checked />
-            <p class="tag">Estudo</p>
-          </label>
+          @foreach ($tags as $tag)
+            @if($tag->id != 1)
+              <label>
+                <input type="radio" name="rdTag" class="rdTag" value={{$tag->id}}/>
+                <p class="tag">{{$tag->name}}</p>
+              </label>
+            @endif
+          @endforeach
         </div>
         <div class="containerItem" id="timerContainer">
           <label>

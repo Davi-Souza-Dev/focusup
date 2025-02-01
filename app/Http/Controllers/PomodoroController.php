@@ -3,9 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Models\Pomodoro;
+use App\Models\Tag;
 use Cron\DayOfWeekField;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
+use Illuminate\Support\Facades\Auth;
 
 class PomodoroController extends Controller
 {
@@ -14,7 +16,7 @@ class PomodoroController extends Controller
     {
         //PEGANDO AS CONFIGURAÇÔES PASSADAS
         $icon = $request->rdIcon;
-        $tag = $request->rdTag;
+        $tag = Tag::find($request->rdTag);
         $timer = $request->rdTimer;
         //VOLTANDO A VIEW
         return view('index', compact('icon', 'tag', 'timer'));
@@ -33,11 +35,13 @@ class PomodoroController extends Controller
     public function save(Request $request)
     {
         //PEGANDO AS CONFIGURAÇÔES PASSADAS
+        $idUser = Auth::user()->id; //PEGANDO O ID DO USUARIO LOGADO
+        
         $icon = $request->timerIcon;
-        $tag = $request->timerTag;
+        $tag = $request->timerTag != 0 ? $request->timerTag : 1;
         $timer = $request->timeTimer;
-        $done = $request->done;
-
+        $done = $request->done == 'true' ? 1 : 0;
+        
         //CONFIGURANDO O DIA DA SEMANA
         date_default_timezone_set('America/Sao_Paulo');
         $date = getdate();
@@ -45,8 +49,16 @@ class PomodoroController extends Controller
         $day = $diasSemana[$date['wday']];
 
         // SALVANDO OS DADOS
- 
+        Pomodoro::create([
+            'timer' => $timer,
+            'day' => $day,
+            'created' => date('H:i'),
+            'done' => $done,
+            'id_user' => $idUser,
+            'id_tag' => $tag,
+        ]);
+        
         //VOLTANDO A VIEW
-        //  return view('index',compact('icon','tag','timer'));
+         return view('index');
     }
 }

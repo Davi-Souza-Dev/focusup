@@ -3,7 +3,7 @@
     <input type="hidden" id="timerIcon" name="timerIcon" value="{{$icon}}">
     <input type="hidden" id="timerTag" name="timerTag" value="{{$tag}}">
     <input type="hidden" id="timeTimer" name="timeTimer" value="{{$timer}}">
-    <input type="hidden" id="done" name="done" value="true">
+    <input type="hidden" id="done" name="done" value=true>
     <div class="containerTimer" id="containerTimer">
         <div class="timerIcon">
             @isset($icon)
@@ -25,7 +25,6 @@
         @else
             <p class="timerClock" id="timerClock" value=25>25:00<p>
         @endif
-  
         <button class="timerButton" id="btnCancel">
             Cancel
         </button>

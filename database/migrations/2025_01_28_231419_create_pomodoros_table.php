@@ -16,7 +16,7 @@ return new class extends Migration
 
             //OUTRAS CONFIGURAÇÕES
             $table->integer('timer');
-            $table->date('day');
+            $table->string('day');
             $table->boolean('done');
             $table->time('created');
 

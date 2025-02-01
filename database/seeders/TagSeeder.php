@@ -13,6 +13,11 @@ class TagSeeder extends Seeder
      */
     public function run(): void
     {
+        Tag::create(
+            [
+                'name' => 'Sem Tag',
+            ]
+        );
         Tag::factory(3)->create();
     }
 }

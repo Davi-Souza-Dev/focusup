@@ -20,16 +20,15 @@
                 <input type="hidden" value="2" name="icon">
                     <img src="{{asset('pomoIcons/icon2.svg')}}" alt="icone padrão">
                 @endisset
-                
         
             </div>
             <div class="timerTag">
                 <p class="tagTitle">
                     @if(isset($tag))
-                        <input type="hidden" value={{$tag}} name="tag">
-                        {{$tag}}
+                        <input type="hidden" value={{$tag->id}} name="tag">
+                        {{$tag->name}}
                     @else
-                        <input type="hidden" value="Sem tag" name="tag">
+                        <input type="hidden" value="0" name="tag">
                         Sem Tag    
                     @endif
                 </p>
