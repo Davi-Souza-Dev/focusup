@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="{{asset("style/style.css")}}">
     <link rel="stylesheet" href="{{asset("style/pomodoro.css")}}">
     <link rel="stylesheet" href="{{asset("style/menu.css")}}">
-    <title>Menu Layout</title>
+    <title>Start</title>
 </head>
 <body>
     @include('components.pomoStart')

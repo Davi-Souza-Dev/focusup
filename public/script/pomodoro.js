@@ -1,6 +1,7 @@
 // PEGANDO OS INPUTS E VALUES
 const btnCancel = document.getElementById("btnCancel");
 const timerTag = document.getElementById("timerTag").value;
+const done = document.getElementById("done");
 const timerClock = document.getElementById("timerClock");
 const timeValue = timerClock.getAttribute('value');
 let min = timeValue - 1;
@@ -28,29 +29,15 @@ const startTimer = () => {
 // PARANDO O TIMER
 const timerStop = () =>{
     clearInterval(timer);
-    let formData = new FormData();
-    let diaSemana = new Date().getDay();
-    const diasSemana = ['Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sabado', 'Domingo'];
-    let day = diasSemana[diaSemana - 1];
-    let data = [timeValue,timerTag,timerDone,day];
-
-
-    const endpoint = "/save";
-    const header = {
-        method: "POST",
-        body: JSON.stringify(data)
-    }
-
-    fetch(endpoint,header)
-    .then((resp)=>resp.text())
-    .then((resp)=>{
-        console.log(resp);
-    });
+   
+    const form = document.getElementById("formPomodoro");
+    form.submit();
 }
 
 btnCancel.addEventListener('click',()=>{
     let result = window.confirm('Deseja parar o pomodoro?');
     if(result){
+        done.setAttribute("value",false);
         clearInterval(timer);
     }
 }); 

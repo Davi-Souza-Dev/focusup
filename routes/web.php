@@ -1,11 +1,18 @@
 <?php
 
+use App\Http\Controllers\LoginController;
 use App\Http\Controllers\PomodoroController;
 use App\Http\Controllers\SiteController;
 use Illuminate\Support\Facades\Route;
 
-// ROTA PARA IR NO INDEX DO SITE
+// ROTAS DO SITE
 Route::get('/', [SiteController::class, 'index'])->name('site.index');
+Route::get('/login',function(){
+    return view('loginForm');
+})->name('login.form');
+
+// ROTAS PARA LOGIN
+Route::post('/auth',[LoginController::class,'auth'])->name('login.auth');
 
 //CONFIGURAÇÂO DO POMODORO
 Route::get('/config',function(){
@@ -17,4 +24,5 @@ Route::post('/config',[PomodoroController::class,'config'])->name('pomo.setConfi
 Route::post('/start',[PomodoroController::class,'start'])->name('pomo.start');
 // SALVAR O POMODORO INICIADO
 Route::post('/save',[PomodoroController::class,'save'])->name('pomo.save');
+
 
