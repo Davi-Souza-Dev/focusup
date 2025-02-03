@@ -1,5 +1,4 @@
-
-.timerConfig{
+.timerConfig {
     width: 25px;
     height: 25px;
     background: none;
@@ -8,13 +7,12 @@
     top: 10px;
 }
 
-.timerConfig svg{
+.timerConfig svg {
     width: 100%;
     height: 100%;
 }
 
-
-.containerTimer{
+.containerTimer {
     width: 400px;
     height: 400px;
     position: relative;
@@ -28,7 +26,7 @@
     outline: 5px solid var(--roxo);
 }
 
-.containerTimer .timerIcon{
+.containerTimer .timerIcon {
     width: 180px;
     height: 180px;
     display: flex;
@@ -39,12 +37,26 @@
     background: var(--branco);
 }
 
-.timerIcon img{
+.timerIcon img {
     width: 70%;
     height: 70%;
 }
 
-.containerTimer .timerTag{
+.progress-bg {
+    fill: none;
+    stroke: var(--background-color);
+    stroke-width: 10;
+}
+
+.progress-bar {
+    fill: none;
+    stroke: var(--progress-color);
+    stroke-width: 10;
+    stroke-dasharray: 502;  /* Circunferência do círculo (2 * π * 80) */
+    stroke-dashoffset: 502; /* Começa com o círculo "vazio" */
+    transition: stroke-dashoffset 0.3s linear;
+}
+.containerTimer .timerTag {
     width: fit-content;
     height: fit-content;
     border-radius: 5px;
@@ -55,28 +67,27 @@
     align-items: center;
     justify-content: center;
     gap: 5px;
-
 }
 
-.tagTitle{
+.tagTitle {
     font-family: var(--font);
     font-weight: bolder;
     color: var(--branco);
 }
 
-.tagIcon{
+.tagIcon {
     width: 15px;
     height: 15px;
 }
 
-.containerTimer  .timerClock{
+.containerTimer .timerClock {
     font-family: var(--font);
     font-size: 3rem;
     font-weight: bolder;
     color: var(--branco);
 }
 
-.containerTimer .timerButton{
+.containerTimer .timerButton {
     width: fit-content;
     height: fit-content;
     padding: 5px 15px;
@@ -92,19 +103,18 @@
     font-family: var(--font);
 }
 
-.timerButton:active{
+.timerButton:active {
     transform: translateY(5px);
     box-shadow: 0px 0px 0px var(--roxoEscuro);
 }
 
-
 /* CONFIG MODAL */
-.configForm{
+.configForm {
     width: fit-content;
     height: fit-content;
 }
 
-.containerConfig{
+.containerConfig {
     width: 600px;
     height: 400px;
     /* padding: 5px 0px; */
@@ -118,8 +128,8 @@
     background: #212326;
 }
 
-.configClose{
-    width: 25px ;
+.configClose {
+    width: 25px;
     height: 25px;
     background: none;
     position: absolute;
@@ -127,12 +137,12 @@
     top: 10px;
 }
 
-.configClose svg{
+.configClose svg {
     width: 100%;
     height: 100%;
 }
 
-.containerItem{
+.containerItem {
     width: 100%;
     height: 25%;
     /* height: fit-content; */
@@ -143,16 +153,16 @@
     gap: 25px;
 }
 
-#iconContainer{
+#iconContainer {
     border-top: none !important;
     height: 35%;
 }
 
-#timerContainer{
+#timerContainer {
     border-bottom: 5px solid var(--roxo);
 }
 
-.containerButtom{
+.containerButtom {
     width: 100%;
     height: fit-content;
     padding: 5px 0px;
@@ -164,7 +174,8 @@
     padding: 5px;
 }
 
-.containerButtom button , .btnCancel {
+.containerButtom button,
+.btnCancel {
     width: fit-content;
     height: fit-content;
     padding: 5px 15px;
@@ -180,15 +191,15 @@
     font-family: var(--font);
 }
 
-.containerButtom .btnCancel{
+.containerButtom .btnCancel {
     background: red !important;
 }
 
-input{
+input {
     display: none;
 }
 
-input:checked + .item{
+input:checked + .item {
     width: 100px !important;
     height: 100px !important;
     background: var(--fundoSecundario) !important;
@@ -196,7 +207,7 @@ input:checked + .item{
     transition: 0.3s;
 }
 
-.item{
+.item {
     width: 70px;
     height: 70px;
     border-radius: 50%;
@@ -207,17 +218,17 @@ input:checked + .item{
     overflow: hidden;
 }
 
-
-.focus svg path{
+.focus svg path {
     fill: var(--branco);
 }
 
-.item svg{
+.item svg {
     width: 60%;
     height: 60%;
 }
 
-.tag,.timer{
+.tag,
+.timer {
     width: fit-content;
     height: fit-content;
     border-radius: 5px;
@@ -229,12 +240,12 @@ input:checked + .item{
     font-weight: bolder;
 }
 
-.rdTag:checked + .tag{
+.rdTag:checked + .tag {
     background: var(--fundoSecundario);
     color: var(--branco);
 }
 
-.rdTimer:checked + .timer{
+.rdTimer:checked + .timer {
     background: var(--fundoSecundario);
     color: var(--branco);
 }

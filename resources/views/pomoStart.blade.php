@@ -4,10 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{asset("style/reset.css")}}">
-    <link rel="stylesheet" href="{{asset("style/style.css")}}">
+    <link rel="stylesheet" href="{{asset("style/style.css")}}"> 
     <link rel="stylesheet" href="{{asset("style/pomodoro.css")}}">
     <link rel="stylesheet" href="{{asset("style/menu.css")}}">
     <title>Start</title>
+    <style>
+        .timerIcon{
+            border: none !important;
+            outline: none !important;
+        }
+    </style>
 </head>
 <body>
     @include('components.pomoStart')
