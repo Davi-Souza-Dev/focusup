@@ -13,6 +13,8 @@
 }
 
 .containerTimer {
+    position: absolute;
+    top: -50px;
     width: 400px;
     height: 400px;
     position: relative;
@@ -35,27 +37,18 @@
     justify-content: center;
     outline: 5px solid var(--roxo);
     background: var(--branco);
+    position: relative;
 }
 
 .timerIcon img {
     width: 70%;
     height: 70%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
 }
 
-.progress-bg {
-    fill: none;
-    stroke: var(--background-color);
-    stroke-width: 10;
-}
-
-.progress-bar {
-    fill: none;
-    stroke: var(--progress-color);
-    stroke-width: 10;
-    stroke-dasharray: 502;  /* Circunferência do círculo (2 * π * 80) */
-    stroke-dashoffset: 502; /* Começa com o círculo "vazio" */
-    transition: stroke-dashoffset 0.3s linear;
-}
 .containerTimer .timerTag {
     width: fit-content;
     height: fit-content;
@@ -112,6 +105,7 @@
 .configForm {
     width: fit-content;
     height: fit-content;
+
 }
 
 .containerConfig {
@@ -120,12 +114,16 @@
     /* padding: 5px 0px; */
     outline: 5px solid var(--roxo);
     border-radius: 10px;
-    position: relative;
+    position: absolute;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     background: #212326;
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    transform: translate(-50%);
 }
 
 .configClose {

@@ -7,6 +7,9 @@ use Illuminate\Support\Facades\Route;
 
 // ROTAS DO SITE
 Route::get('/', [SiteController::class, 'index'])->name('site.index');
+
+Route::get('/todolist', [SiteController::class, 'todolist'])->name('site.todolist');
+
 Route::get('/login',function(){
     return view('loginForm');
 })->name('login.form');
@@ -14,9 +17,9 @@ Route::get('/login',function(){
 // ROTAS PARA LOGIN
 Route::post('/auth',[LoginController::class,'auth'])->name('login.auth');
 
-//CONFIGURAÇÂO DO POMODORO
+// |--- POMODORO ---|
 Route::get('/config',function(){
-    return view('config');
+    return view('config'); //CONFIGURAÇÂO DO POMODORO
 })->name('pomo.config');
 // SALVAR CONFIGURAÇÔES DO POMODORO
 Route::post('/config',[PomodoroController::class,'config'])->name('pomo.setConfig');
@@ -24,5 +27,7 @@ Route::post('/config',[PomodoroController::class,'config'])->name('pomo.setConfi
 Route::post('/start',[PomodoroController::class,'start'])->name('pomo.start');
 // SALVAR O POMODORO INICIADO
 Route::post('/save',[PomodoroController::class,'save'])->name('pomo.save');
+
+// |--- To Do List ---|
 
 

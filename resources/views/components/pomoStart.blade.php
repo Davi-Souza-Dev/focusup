@@ -5,11 +5,8 @@
     <input type="hidden" id="timeTimer" name="timeTimer" value="{{$timer}}">
     <input type="hidden" id="done" name="done" value=true>
     <div class="containerTimer" id="containerTimer">
+
         <div class="timerIcon">
-            <svg class="progress-ring" width="180" height="180">
-                <circle class="progress-bg" cx="90" cy="90" r="80"></circle>
-                <circle class="progress-bar" cx="90" cy="90" r="80"></circle>
-            </svg>
             @isset($icon)
                 @if ($icon == 1)
                     <img src="{{asset('pomoIcons/icon1.svg')}}" alt="icone 1">
