@@ -16,7 +16,7 @@
     </style>
 </head>
 <body>
-    @include('components.pomoStart')
+    @include('components.pomodoro.pomoStart')
 
     @include('components.menu')
     {{-- <div class="menuContainer">

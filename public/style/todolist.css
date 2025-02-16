@@ -1,0 +1,136 @@
+/* BARRA DO TOPO  */
+.todobar{
+    width: 700px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    /* outline: 5px solid red; */
+    gap: 25px;
+    border-radius: 5px;
+    position: absolute;
+    top: 50px;
+}
+
+.addTask{
+    width: 80px;
+    height: 100%;
+    border-radius: 5px;
+    background: var(--branco);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.addTask svg{
+    width: 50%;
+    height: 50%;
+}
+
+.addTask svg path{
+    fill: var(--roxo);
+}
+
+.taskContent{
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    background: var(--branco);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-indent: 10px;
+    font-family: var(--font);
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-size: 1.2rem;
+}
+
+.taskPrio{
+    width: 80px;
+    height: 100%;
+    border-radius: 5px;
+    background: var(--branco);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.taskPrio svg{
+    width: 50%;
+    height: 50%;
+}
+
+
+/* TASK CONTAINER */
+.taskscontainer{
+    /* outline: 5px solid red; */
+    width: 700px;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 15px;
+    position: absolute;
+    top: 150px;
+}
+
+.task{
+    /* outline: 5px solid blue; */
+    width: 100%;
+    height: 50px;
+    background: var(--branco);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 10px;
+    gap: 10px;
+}
+
+.taskDone{
+    width: 30px;
+    height: 30px;
+    border-radius: 10px;
+    background: var(--fundo);
+    border: 3px solid var(--fundoSecundario);
+}
+
+.taskText{
+    font-family: var(--font);
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-size: 1.5rem;
+}
+
+.taskActions{
+    width: fit-content;
+    height: fit-content;
+    position: absolute;
+    right: 10px;
+    /* outline: 5px solid purple; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.taskDelete{
+    width: 50px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-left: 2px solid var(--fundo);
+    border-right: 2px solid var(--fundo);
+}
+
+.taskDelete svg{
+    width: 80%;
+    height: 80%;
+}

@@ -19,7 +19,7 @@ Route::post('/auth',[LoginController::class,'auth'])->name('login.auth');
 
 // |--- POMODORO ---|
 Route::get('/config',function(){
-    return view('config'); //CONFIGURAÇÂO DO POMODORO
+    return view('pomodoro.config'); //CONFIGURAÇÂO DO POMODORO
 })->name('pomo.config');
 // SALVAR CONFIGURAÇÔES DO POMODORO
 Route::post('/config',[PomodoroController::class,'config'])->name('pomo.setConfig');
@@ -29,5 +29,4 @@ Route::post('/start',[PomodoroController::class,'start'])->name('pomo.start');
 Route::post('/save',[PomodoroController::class,'save'])->name('pomo.save');
 
 // |--- To Do List ---|
-
 

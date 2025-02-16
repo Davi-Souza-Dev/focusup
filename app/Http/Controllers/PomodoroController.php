@@ -23,9 +23,9 @@ class PomodoroController extends Controller
         // CRIANDO UMA SESSIO PARA AS CONFIGURAÇÕES
         session('config');
         session()->put('config', ['icon' => $icon, 'tag' => $tag, 'timer' => $timer]);
-        $testeSession = session()->get('config');
-
+        $page = 1; //INDICA QUE ESTA NA PÁGINA 1 DO MENU
         //VOLTANDO A VIEW
+
         // return view('index', compact('icon', 'tag', 'timer'));
         return redirect()->route('site.index');
     }
@@ -38,7 +38,7 @@ class PomodoroController extends Controller
         $timer = $request->timer;
 
         //VOLTANDO A VIEW
-        return view('pomoStart', compact('icon', 'tag', 'timer'));
+        return view('pomodoro.pomoStart', compact('icon', 'tag', 'timer'));
     }
     //SALVAR UM POMODORO COMPLETO OU NÃO
     public function save(Request $request)

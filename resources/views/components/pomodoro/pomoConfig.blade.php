@@ -146,10 +146,17 @@
         <div class="containerItem" id="tagContainer">
           @foreach ($tags as $tag)
             @if($tag->id != 1)
+              @if($tag->id == 2)
+              <label>
+                <input type="radio" name="rdTag" class="rdTag" value={{$tag->id}} checked/>
+                <p class="tag">{{$tag->name}}</p>
+              </label>
+              @else
               <label>
                 <input type="radio" name="rdTag" class="rdTag" value={{$tag->id}}/>
                 <p class="tag">{{$tag->name}}</p>
               </label>
+              @endif
             @endif
           @endforeach
         </div>
@@ -168,8 +175,8 @@
           </label>
         </div>
         <div class="containerButtom">
-          <button type="submit" class="btnStart">Start</button>
-          <a type="submit" class="btnCancel" href="index.html">Cancel</a>
+          <button type="submit" class="btnStart">OK</button>
+          <a type="submit" class="btnCancel" href="{{route('site.index')}}">Cancel</a>
         </div>
     </div>
 </form>

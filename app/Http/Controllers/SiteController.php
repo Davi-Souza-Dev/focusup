@@ -11,11 +11,12 @@ class SiteController extends Controller
     public function index()
     {
         $page = 1;
-        return view('index',compact('page'));
+        return view('index', compact('page'));
     }
 
+    // VAI PARA A PÁGINA DO TO DO LIST
     public function todolist(){
         $page = 2;
-        return view('index',compact('page'));
+        return view('index', compact('page'));
     }
 }

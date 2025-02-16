@@ -11,8 +11,7 @@
     gap: 100px;
     flex-direction: row;
     flex-wrap: nowrap;
-    
-    position: absolute;
+    position: fixed;
     bottom: 50px;
     left: 50%;
     transform: translate(-50%);
