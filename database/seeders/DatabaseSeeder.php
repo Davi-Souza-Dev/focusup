@@ -27,6 +27,8 @@ class DatabaseSeeder extends Seeder
             UserSeeder::class,
             TagSeeder::class,
             PomodoroSeeder::class,
+            DeckSeeder::class,
+            CardSeeder::class,
             // TodolistSeeder::class,
         ]);
     }
