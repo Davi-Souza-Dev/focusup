@@ -3,6 +3,7 @@
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\PomodoroController;
 use App\Http\Controllers\SiteController;
+use App\Http\Controllers\TodolistController;
 use Illuminate\Support\Facades\Route;
 
 // ROTAS DO SITE
@@ -29,4 +30,10 @@ Route::post('/start',[PomodoroController::class,'start'])->name('pomo.start');
 Route::post('/save',[PomodoroController::class,'save'])->name('pomo.save');
 
 // |--- To Do List ---|
+Route::post('/todolist/add',[TodolistController::class,'addTask'])->name('todolist.addTask');
 
+Route::post('/todolist/actions',[TodolistController::class,'taskActions'])->name('todolist.taskActions');
+
+// Route::post('/todolist/done',[TodolistController::class,'doneTask'])->name('todolist.doneTask');
+
+// Route::post('/todolist/delete',[TodolistController::class,'deleteTask'])->name('todolist.deleteTask');

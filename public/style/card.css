@@ -1,0 +1,69 @@
+
+.card {
+    width: 250px;
+    height: 300px;
+    background: var(--fundoSecundario);
+    border-radius: 15px;
+    outline: px solid var(--roxoEscuro);
+    /* box-shadow: 1px 5px 60px 0px var(--roxoEscuro); */
+   }
+   
+   .card .card-border-top {
+    width: 60%;
+    height: 3%;
+    background: var(--roxoEscuro);
+    margin: auto;
+    border-radius: 0px 0px 15px 15px;
+   }
+   
+   .card span {
+    font-weight: 600;
+    color: white;
+    text-align: center;
+    display: block;
+    padding-top: 10px;
+    font-size: 16px;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-family: var(--font);
+    font-weight: bolder;
+   }
+   
+   .card .msg {
+    font-weight: 400;
+    color: white;
+    display: block;
+    text-align: center;
+    padding-top: 3px;
+    font-size: 12px;
+   }
+   
+   .card .img {
+    width: 70px;
+    height: 80px;
+    border-radius: 15px;
+    margin: auto;
+    margin-top: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+   }
+   
+   .card .cardButton {
+    width: fit-content;
+    padding: 8px 25px;
+    display: block;
+    margin: auto;
+    border-radius: 8px;
+    border: none;
+    margin-top: 30px;
+    background: var(--roxoEscuro);
+    color: white;
+    font-weight: 600;
+    text-decoration: none;
+   }
+   
+   .card .cardButton:hover {
+    background: var(--roxo);
+   }

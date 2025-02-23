@@ -6,6 +6,7 @@ namespace Database\Seeders;
 
 use App\Models\Pomodoro;
 use App\Models\Tag;
+use App\Models\Todolist;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -25,7 +26,8 @@ class DatabaseSeeder extends Seeder
         $this->call([
             UserSeeder::class,
             TagSeeder::class,
-            PomodoroSeeder::class
+            PomodoroSeeder::class,
+            // TodolistSeeder::class,
         ]);
     }
 }

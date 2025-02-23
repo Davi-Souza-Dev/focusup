@@ -8,10 +8,10 @@
     <link rel="stylesheet" href="{{ asset('style/style.css') }}">
     <link rel="stylesheet" href="{{ asset('style/pomodoro.css') }}">
     <link rel="stylesheet" href="{{ asset('style/todolist.css') }}">
+    <link rel="stylesheet" href="{{ asset('style/card.css') }}">
     <link rel="stylesheet" href="{{ asset('style/menu.css') }}">
     <title>Site</title>
 </head>
-
 <body>
     {{-- ESCOLHENDO A RENDERIZAÇÃO DA PÁGINA --}}
     @switch($page)
@@ -24,7 +24,7 @@
         @default
         @break
     @endswitch
+    
     @include('components.menu')
 </body>
-
 </html>

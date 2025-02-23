@@ -19,11 +19,10 @@ class LoginController extends Controller
         // FAZENDO O LOGIN
         if(Auth::attempt($credentials)){
             $request->session()->regenerate();
-
             return redirect()->route('site.index');
         }else{
             return redirect()->back()->with('error','email ou senha invalidos');
         }
-        // dd($request);
+
     }
 }
